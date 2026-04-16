@@ -15,10 +15,10 @@ const Home = lazy(() => import("./components/Home"));
 const Services = lazy(() => import("./components/Services"));
 const About = lazy(() => import("./components/About"));
 
-const NotFoundpage = lazy(() => import("./pages/NotFound"));
-const CtScan = lazy(() => import("./pages/Ct"));
-const MriScan = lazy(() => import("./pages/Mri"));
-const XrayScan = lazy(() => import("./pages/XRay"));
+const NotFoundpage = lazy(() => import("./Pages/NotFound"));
+const CtScan = lazy(() => import("./Pages/Ct"));
+const MriScan = lazy(() => import("./Pages/Mri"));
+const XrayScan = lazy(() => import("./Pages/XRay"));
 
 
 

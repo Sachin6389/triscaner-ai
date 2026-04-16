@@ -31,7 +31,7 @@ function Mri() {
       setResult(null);
 
       const response = await axios.post(
-        "http://localhost:5000/predict/brain",
+        import.meta.env.VITE_API_URL + "/predict/brain",
         formData,
         {
           headers: {

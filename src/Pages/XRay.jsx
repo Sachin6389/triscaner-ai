@@ -8,8 +8,10 @@ function XRay() {
   const [loading, setLoading] = useState(false);
 
   // ✅ CHANGE THIS BASE URL WHEN NEEDED
-  const API_BASE = "http://localhost:5000"; 
-  // const API_BASE = "http://192.168.187.90:5000";
+  const API_BASE = import.meta.env.VITE_API_URL; 
+  console.log(API_BASE);
+  
+
 
   // 🔥 Cleanup preview memory
   useEffect(() => {
@@ -60,9 +62,10 @@ function XRay() {
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
-          timeout: 20000,
+          
         }
       );
+      console.log( response);
 
       console.log("✅ API RESPONSE:", response.data);
 
@@ -71,6 +74,7 @@ function XRay() {
       // ✅ Strict validation
       if (!data || data.error) {
         alert(data?.error || "Invalid response from server");
+        println("❌ API ERROR DETAILS:", data);
         return;
       }
 

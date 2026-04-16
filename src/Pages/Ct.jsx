@@ -44,13 +44,15 @@ function Ct() {
       setResult(null);
 
       let url = "";
-      if (type === "brain") url = "http://localhost:5000/predict/brainStroke";
-      if (type === "chest") url = "http://localhost:5000/predict/chest";
-      if (type === "kidney") url = "http://localhost:5000/predict/kidney";
+      if (type === "brain") url =  import.meta.env.VITE_API_URL + "/predict/brainStroke";
+      if (type === "chest") url =  import.meta.env.VITE_API_URL + "/predict/chest";
+      if (type === "kidney") url =  import.meta.env.VITE_API_URL + "/predict/kidney";
 
       const response = await axios.post(url, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
+      console.log(response);
+      
 
       setResult(response.data);
 

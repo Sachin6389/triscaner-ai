@@ -1,0 +1,1 @@
+import{j as e}from"./index-B6HCqhC8.js";function s(){return e.jsxs("div",{className:"flex flex-col items-center justify-center h-full",children:[e.jsx("h1",{className:"text-4xl font-bold text-gray-800",children:"404"}),e.jsx("p",{className:"text-lg text-gray-600",children:"Page not found"})]})}export{s as default};
